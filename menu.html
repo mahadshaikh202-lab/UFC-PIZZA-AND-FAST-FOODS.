@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu | UFC Pizza & Fast Food</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* ==========================================
+           MENU PAGE
+        ========================================== */
+
+        .menu-page {
+            padding: 130px 6% 80px;
+            background: #090909;
+            min-height: 100vh;
+        }
+
+        .menu-hero {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .menu-label {
+            color: #e21b2d;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .menu-hero h1 {
+            font-family: "Oswald", sans-serif;
+            font-size: clamp(45px, 7vw, 75px);
+            color: #fff;
+            margin: 10px 0 15px;
+            text-transform: uppercase;
+        }
+
+        .menu-hero h1 span {
+            color: #e21b2d;
+        }
+
+        .menu-hero p {
+            color: #999;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+
+        /* ==========================================
+           CATEGORY NAV
+        ========================================== */
+
+        .menu-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 55px;
+        }
+
+        .menu-categories a {
+            text-decoration: none;
+            color: #ddd;
+            background: #151515;
+            border: 1px solid rgba(255,255,255,.08);
+            padding: 11px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: .25s ease;
+        }
+
+        .menu-categories a:hover,
+        .menu-categories a.active {
+            background: #b5121b;
+            color: #fff;
+            border-color: #b5121b;
+        }
+
+
+        /* ==========================================
+           SECTION
+        ========================================== */
+
+        .menu-section {
+            max-width: 1200px;
+            margin: 0 auto 70px;
+            scroll-margin-top: 100px;
+        }
+
+        .menu-section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .menu-section-title .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: #b5121b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .menu-section-title h2 {
+            color: #fff;
+            font-family: "Oswald", sans-serif;
+            font-size: 32px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .menu-section-title p {
+            color: #888;
+            margin: 3px 0 0;
+            font-size: 13px;
+        }
+
+
+        /* ==========================================
+           DEAL GRID
+        ========================================== */
+
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .deal-card {
+            position: relative;
+            background: #131313;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 18px;
+            padding: 24px;
+            overflow: hidden;
+            transition: .3s ease;
+        }
+
+        .deal-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #b5121b;
+        }
+
+        .deal-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(181,18,27,.5);
+            box-shadow: 0 15px 40px rgba(0,0,0,.35);
+        }
+
+        .deal-number {
+            color: #e21b2d;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .deal-card h3 {
+            color: #fff;
+            font-family: "Oswald", sans-serif;
+            font-size: 24px;
+            margin: 7px 0 12px;
+        }
+
+        .deal-items {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.8;
+            min-height: 80px;
+        }
+
+        .deal-bottom {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .deal-price {
+            color: #e21b2d;
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .order-deal {
+            text-decoration: none;
+            background: #b5121b;
+            color: #fff;
+            padding: 9px 13px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            transition: .2s ease;
+        }
+
+        .order-deal:hover {
+            background: #e21b2d;
+        }
+
+
+        /* ==========================================
+           FOOD ITEMS
+        ========================================== */
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .menu-item {
+            background: #131313;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: .25s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(181,18,27,.5);
+        }
+
+        .menu-item .item-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .menu-item h3 {
+            color: #fff;
+            font-size: 17px;
+            margin: 0 0 7px;
+        }
+
+        .menu-item p {
+            color: #777;
+            font-size: 12px;
+            margin: 0;
+        }
+
+
+        /* ==========================================
+           FAMILY DEAL
+        ========================================== */
+
+        .family-deal {
+            background:
+                linear-gradient(
+                    135deg,
+                    #1a0507,
+                    #111 55%,
+                    #200609
+                );
+
+            border: 1px solid rgba(226,27,45,.35);
+            border-radius: 22px;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .family-deal .deal-number {
+            color: #ff3344;
+        }
+
+        .family-deal h3 {
+            color: #fff;
+            font-family: "Oswald", sans-serif;
+            font-size: 35px;
+            margin: 8px 0;
+        }
+
+        .family-deal p {
+            color: #aaa;
+            max-width: 650px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .family-price {
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .family-price strong {
+            display: block;
+            color: #e21b2d;
+            font-size: 32px;
+        }
+
+        .family-price a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background: #b5121b;
+            color: #fff;
+            padding: 11px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* ==========================================
+           DELIVERY INFO
+        ========================================== */
+
+        .delivery-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #131313;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 18px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .delivery-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .delivery-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #b5121b;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .delivery-info h3 {
+            color: #fff;
+            margin: 0 0 5px;
+        }
+
+        .delivery-info p {
+            color: #888;
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .delivery-contact {
+            color: #ddd;
+            font-size: 13px;
+            text-align: right;
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 1000px) {
+
+            .deals-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .items-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .menu-page {
+                padding: 110px 20px 60px;
+            }
+
+            .menu-hero {
+                margin-bottom: 40px;
+            }
+
+            .menu-hero h1 {
+                font-size: 48px;
+            }
+
+            .menu-categories {
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 8px;
+            }
+
+            .menu-categories a {
+                white-space: nowrap;
+            }
+
+            .deals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .items-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .family-deal {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 25px;
+            }
+
+            .family-deal h3 {
+                font-size: 28px;
+            }
+
+            .family-price {
+                text-align: left;
+            }
+
+            .delivery-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .delivery-contact {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span>UFC</span>
+                <small>PIZZA & FAST FOOD</small>
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html" class="active">
+                    Menu
+                </a>
+
+                <a href="index.html#deals">
+                    Deals
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button class="account-btn" id="accountBtn">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Account</span>
+                </button>
+
+
+                <button class="cart-btn" id="cartBtn">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </button>
+
+
+                <button class="menu-toggle" id="menuToggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MENU PAGE
+    ========================================== -->
+
+    <main class="menu-page">
+
+
+        <!-- HERO -->
+
+        <section class="menu-hero">
+
+            <span class="menu-label">
+                UFC PIZZA & FAST FOOD
+            </span>
+
+            <h1>
+                Our <span>Menu</span>
+            </h1>
+
+            <p>
+                Fresh food, big taste and amazing deals.
+                Choose your favorite UFC meal and order online.
+            </p>
+
+        </section>
+
+
+
+        <!-- CATEGORY NAV -->
+
+        <div class="menu-categories">
+
+            <a href="#deals" class="active">
+                🔥 Deals
+            </a>
+
+            <a href="#pizza">
+                🍕 Pizza
+            </a>
+
+            <a href="#fastfood">
+                🍔 Fast Food
+            </a>
+
+            <a href="#sides">
+                🍟 Sides & Drinks
+            </a>
+
+        </div>
+
+
+
+        <!-- ======================================
+             DEALS
+        ======================================= -->
+
+        <section class="menu-section" id="deals">
+
+            <div class="menu-section-title">
+
+                <div class="icon">
+                    🔥
+                </div>
+
+                <div>
+
+                    <h2>
+                        Special Deals
+                    </h2>
+
+                    <p>
+                        Great food. Great prices.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="deals-grid">
+
+
+                <!-- DEAL 1 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 01
+                    </span>
+
+                    <h3>
+                        Small Pizza Deal
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 1 Small Pizza<br>
+                        🥤 1 × 375ml Drink<br>
+                        🥟 1 Spring Roll
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 399
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 2 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 02
+                    </span>
+
+                    <h3>
+                        Twister Deal
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 1 Regular Pizza<br>
+                        🌯 1 Twister Roll<br>
+                        🥤 1 × 500ml Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 799
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 3 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 03
+                    </span>
+
+                    <h3>
+                        Double Pizza Deal
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 2 Small Pizza<br>
+                        🥤 1 × 500ml Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 699
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 4 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 04
+                    </span>
+
+                    <h3>
+                        Large Pizza Deal
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 1 Large Pizza<br>
+                        🍝 ½ Pasta<br>
+                        🥤 1 Liter Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 1,299
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 5 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 05
+                    </span>
+
+                    <h3>
+                        Zinger Deal
+                    </h3>
+
+                    <div class="deal-items">
+                        🍔 4 Zinger<br>
+                        🥤 1 Liter Cold Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 1,450
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 6 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 06
+                    </span>
+
+                    <h3>
+                        Small Pizza Family
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 4 Small Pizza<br>
+                        🥤 1 Liter Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 1,199
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 7 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 07
+                    </span>
+
+                    <h3>
+                        Regular Pizza Deal
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 2 Regular Pizza<br>
+                        🍝 ½ Pasta<br>
+                        🥤 1 Liter Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 1,250
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 8 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 08
+                    </span>
+
+                    <h3>
+                        Large + Regular
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 1 Large Pizza<br>
+                        🍕 1 Regular Pizza<br>
+                        🥤 1 Liter Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 1,199
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 9 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 09
+                    </span>
+
+                    <h3>
+                        Double Large
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 2 Large Pizza<br>
+                        🥤 1 Liter Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 1,570
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 10 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 10
+                    </span>
+
+                    <h3>
+                        Mega Combo
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 1 Large Pizza<br>
+                        🍕 1 Regular Pizza<br>
+                        🥟 3 Spring Rolls<br>
+                        🥤 1 Liter Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 1,999
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEAL 11 -->
+
+                <div class="deal-card">
+
+                    <span class="deal-number">
+                        Deal 11
+                    </span>
+
+                    <h3>
+                        Jumbo Broast Deal
+                    </h3>
+
+                    <div class="deal-items">
+                        🍕 1 Jumbo Pizza<br>
+                        🍗 1 Broast<br>
+                        🥤 1 Liter Drink
+                    </div>
+
+                    <div class="deal-bottom">
+
+                        <span class="deal-price">
+                            Rs. 1,499
+                        </span>
+
+                        <a href="order.html" class="order-deal">
+                            Order →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             FAMILY DEAL
+        ======================================= -->
+
+        <section class="menu-section">
+
+            <div class="family-deal">
+
+                <div>
+
+                    <span class="deal-number">
+                        ⭐ UFC FAMILY DEAL
+                    </span>
+
+                    <h3>
+                        The Ultimate Family Feast
+                    </h3>
+
+                    <p>
+                        🍕 2 Large Pizza &nbsp; • &nbsp;
+                        🌯 2 Twister Roll &nbsp; • &nbsp;
+                        🥤 1 × 1.5L Drink
+                        <br>
+
+                        🍔 2 Zinger &nbsp; • &nbsp;
+                        🍗 1 Broast
+                    </p>
+
+                </div>
+
+
+                <div class="family-price">
+
+                    <strong>
+                        Rs. 2,999
+                    </strong>
+
+                    <a href="order.html">
+                        Order Family Deal →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             PIZZA
+        ======================================= -->
+
+        <section class="menu-section" id="pizza">
+
+            <div class="menu-section-title">
+
+                <div class="icon">
+                    🍕
+                </div>
+
+                <div>
+
+                    <h2>
+                        Pizza
+                    </h2>
+
+                    <p>
+                        Choose your preferred size.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="items-grid">
+
+                <div class="menu-item">
+                    <div class="item-icon">🍕</div>
+                    <h3>Small Pizza</h3>
+                    <p>Perfect for one</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🍕</div>
+                    <h3>Regular Pizza</h3>
+                    <p>Perfect for sharing</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🍕</div>
+                    <h3>Large Pizza</h3>
+                    <p>More pizza, more taste</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🍕</div>
+                    <h3>Jumbo Pizza</h3>
+                    <p>For big gatherings</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             FAST FOOD
+        ======================================= -->
+
+        <section class="menu-section" id="fastfood">
+
+            <div class="menu-section-title">
+
+                <div class="icon">
+                    🍔
+                </div>
+
+                <div>
+
+                    <h2>
+                        Fast Food
+                    </h2>
+
+                    <p>
+                        Delicious UFC favorites.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="items-grid">
+
+                <div class="menu-item">
+                    <div class="item-icon">🍔</div>
+                    <h3>Zinger</h3>
+                    <p>Crispy & delicious</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🍗</div>
+                    <h3>Broast</h3>
+                    <p>Crispy fried chicken</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🌯</div>
+                    <h3>Twister Roll</h3>
+                    <p>Loaded chicken roll</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🥟</div>
+                    <h3>Spring Roll</h3>
+                    <p>Crispy & fresh</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             SIDES & DRINKS
+        ======================================= -->
+
+        <section class="menu-section" id="sides">
+
+            <div class="menu-section-title">
+
+                <div class="icon">
+                    🥤
+                </div>
+
+                <div>
+
+                    <h2>
+                        Sides & Drinks
+                    </h2>
+
+                    <p>
+                        Complete your meal.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="items-grid">
+
+                <div class="menu-item">
+                    <div class="item-icon">🍝</div>
+                    <h3>Half Pasta</h3>
+                    <p>Available in selected deals</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🥤</div>
+                    <h3>375ml Drink</h3>
+                    <p>Chilled soft drink</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🥤</div>
+                    <h3>500ml Drink</h3>
+                    <p>Chilled soft drink</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🥤</div>
+                    <h3>1 Liter Drink</h3>
+                    <p>Perfect for sharing</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🥤</div>
+                    <h3>1.5 Liter Drink</h3>
+                    <p>Perfect for families</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             DELIVERY
+        ======================================= -->
+
+        <section class="delivery-box">
+
+            <div class="delivery-info">
+
+                <div class="delivery-icon">
+                    <i class="fa-solid fa-motorcycle"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Home Delivery & Take Away
+                    </h3>
+
+                    <p>
+                        Delivery charges are area-wise.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="delivery-contact">
+
+                📱 0311-3186867
+                <br>
+
+                ☎️ 0301-2068533
+                <br>
+
+                📍 Jail Road, Hirabad, Hyderabad
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <span>UFC</span>
+
+                    <small>
+                        PIZZA & FAST FOOD
+                    </small>
+
+                </div>
+
+                <p>
+                    Fresh food. Big taste.
+                    Made for your cravings.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="index.html#deals">
+                    Deals
+                </a>
+
+                <a href="order.html">
+                    Order Online
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <a href="tel:03012068533">
+                    <i class="fa-solid fa-phone"></i>
+                    Call Us
+                </a>
+
+                <a href="https://wa.me/923113186867"
+                   target="_blank">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Jail Road, Hirabad
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 UFC Pizza & Fast Food.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

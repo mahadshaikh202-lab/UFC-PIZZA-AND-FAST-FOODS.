@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UFC Pizza & Fast Food</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span>UFC</span>
+                <small>PIZZA & FAST FOOD</small>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="#deals">Deals</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="account-btn" id="accountBtn">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Account</span>
+                </button>
+
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    <i class="fa-solid fa-fire"></i>
+                    HOT • FRESH • DELICIOUS
+                </span>
+
+                <h1>
+                    YOUR CRAVINGS.
+                    <span>OUR SPECIALTY.</span>
+                </h1>
+
+                <p>
+                    Freshly prepared pizzas and fast food,
+                    made with quality ingredients and served hot.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="order.html" class="btn btn-primary">
+                        Order Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="menu.html" class="btn btn-outline">
+                        Explore Menu
+                    </a>
+
+                </div>
+
+                <div class="hero-info">
+
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <strong>4.8</strong>
+                        <span>Customer Rating</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-clock"></i>
+                        <strong>30 min</strong>
+                        <span>Fast Delivery</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <div class="hero-glow"></div>
+
+                <img
+                    src="logo.jpg"
+                    alt="Fresh UFC Pizza"
+                >
+
+                <div class="hero-price">
+                    <span>Starting from</span>
+                    <strong>Rs. 499</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="categories section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">EXPLORE</span>
+                    <h2>What are you craving?</h2>
+                </div>
+
+                <a href="menu.html">
+                    View Full Menu
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="#pizza" class="category-card active">
+                    <div class="category-icon">
+                        🍕
+                    </div>
+                    <h3>Pizza</h3>
+                    <span>Fresh & Cheesy</span>
+                </a>
+
+                <a href="#burgers" class="category-card">
+                    <div class="category-icon">
+                        🍔
+                    </div>
+                    <h3>Burgers</h3>
+                    <span>Juicy & Delicious</span>
+                </a>
+
+                <a href="#sides" class="category-card">
+                    <div class="category-icon">
+                        🍟
+                    </div>
+                    <h3>Fries & Sides</h3>
+                    <span>Perfect Add-ons</span>
+                </a>
+
+                <a href="#drinks" class="category-card">
+                    <div class="category-icon">
+                        🥤
+                    </div>
+                    <h3>Drinks</h3>
+                    <span>Chilled & Fresh</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BEST SELLERS ================= -->
+
+        <section class="menu section" id="menu">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">OUR MENU</span>
+                    <h2>Customer Favorites</h2>
+                </div>
+
+                <a href="order.html">
+                    Order Online
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <!-- FOOD CARD 1 -->
+
+                <article class="food-card">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/images.jpg"
+                            alt="Chicken Fajita Pizza"
+                        >
+
+                        <span class="popular-badge">
+                            <i class="fa-solid fa-fire"></i>
+                            Popular
+                        </span>
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+                            <h3>Chicken Fajita</h3>
+                            <span>Rs. 899</span>
+                        </div>
+
+                        <p>
+                            Tender chicken, onions, capsicum
+                            and our signature spicy sauce.
+                        </p>
+
+                        <button class="add-btn">
+                            Add to Order
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD CARD 2 -->
+
+                <article class="food-card">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/images (1).jpg"
+                            alt="Cheese Pizza"
+                        >
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+                            <h3>Cheese Lover</h3>
+                            <span>Rs. 799</span>
+                        </div>
+
+                        <p>
+                            Loaded with premium melted cheese
+                            and our special pizza sauce.
+                        </p>
+
+                        <button class="add-btn">
+                            Add to Order
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD CARD 3 -->
+
+                <article class="food-card">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/pizza1.jpg.jpg"
+                            alt="Pepperoni Pizza"
+                        >
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+                            <h3>Classic Pepperoni</h3>
+                            <span>Rs. 999</span>
+                        </div>
+
+                        <p>
+                            Classic pepperoni, mozzarella cheese
+                            and rich tomato sauce.
+                        </p>
+
+                        <button class="add-btn">
+                            Add to Order
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DEAL ================= -->
+
+        <section class="deal section" id="deals">
+
+            <div class="deal-content">
+
+                <span class="section-label">LIMITED TIME</span>
+
+                <h2>
+                    Big cravings deserve
+                    <span>big deals.</span>
+                </h2>
+
+                <p>
+                    Grab our special family deal and enjoy
+                    more food without spending more.
+                </p>
+
+                <a href="order.html" class="btn btn-primary">
+                    Get This Deal
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="deal-price">
+                <span>FAMILY DEAL</span>
+                <strong>Rs. 1,999</strong>
+                <small>Save more. Eat more.</small>
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY UFC ================= -->
+
+        <section class="why section" id="about">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">WHY UFC?</span>
+
+                <h2>
+                    Made with passion.
+                    <br>
+                    Served with pride.
+                </h2>
+
+            </div>
+
+
+            <div class="why-grid">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <h3>Fresh Ingredients</h3>
+
+                    <p>
+                        Quality ingredients prepared fresh
+                        for every order.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                    <h3>Always Hot</h3>
+
+                    <p>
+                        Your food is prepared fresh and
+                        served hot every time.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h3>Fast Delivery</h3>
+
+                    <p>
+                        Quick and reliable delivery straight
+                        to your doorstep.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <h3>Made For You</h3>
+
+                    <p>
+                        Great taste, generous portions and
+                        a meal you'll want again.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    <span>UFC</span>
+                    <small>PIZZA & FAST FOOD</small>
+                </div>
+
+                <p>
+                    Fresh food. Big taste.
+                    Made for your cravings.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="#deals">Deals</a>
+                <a href="order.html">Order Online</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Contact</h4>
+
+                <a href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    Call Us
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Our Location
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 UFC Pizza & Fast Food.
+                All rights reserved.
+            </p>
+
+            <div class="socials">
+
+                <a href="https://www.facebook.com/share/1J3BHz8oDx/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CHATBOT ================= -->
+
+   
+<!-- ================= NEW UFC AI CHATBOT ================= -->
+
+<!-- =====================================================
+     UFC PREMIUM CHATBOT
+===================================================== -->
+
+<div class="ufc-chatbot" id="ufcChatbot">
+
+    <!-- HEADER -->
+
+    <div class="ufc-chat-header">
+
+        <div class="chat-brand">
+
+            <div class="chat-avatar">
+                🍕
+            </div>
+
+            <div>
+                <strong>UFC Assistant</strong>
+
+                <span>
+                    <i></i>
+                    Online • Ready to help
+                </span>
+            </div>
+
+        </div>
+
+        <button class="chat-close" id="chatClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <!-- CHAT BODY -->
+
+    <div class="chat-body" id="chatBody">
+
+        <div class="bot-message">
+
+            <div class="message-avatar">
+                🍕
+            </div>
+
+            <div class="message-text">
+
+                👋 <strong>Assalam-o-Alaikum!</strong>
+
+                <br><br>
+
+                Welcome to <strong>UFC Pizza & Fast Food</strong> 🍕
+
+                <br><br>
+
+                What can I help you with today?
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- OPTIONS -->
+
+    <div class="chat-options" id="chatOptions">
+
+        <button data-chat="menu">
+            🍕 Menu
+        </button>
+
+        <button data-chat="deals">
+            🔥 Deals
+        </button>
+
+        <button data-chat="delivery">
+            🚚 Delivery
+        </button>
+
+        <button data-chat="order">
+            🛒 Order Now
+        </button>
+
+        <button data-chat="location">
+            📍 Location
+        </button>
+
+        <button data-chat="contact">
+            ☎️ Contact
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- FLOATING CHAT BUTTON -->
+
+<button class="ufc-chat-button" id="chatOpen">
+
+    <span class="chat-button-icon">
+        <i class="fa-solid fa-comments"></i>
+    </span>
+
+    <span class="chat-button-text">
+        Chat with UFC
+    </span>
+
+    <span class="chat-notification">
+        1
+    </span>
+
+</button>
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

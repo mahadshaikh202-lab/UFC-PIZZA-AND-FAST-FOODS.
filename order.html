@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Online | UFC Pizza & Fast Food</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span>UFC</span>
+                <small>PIZZA & FAST FOOD</small>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html">Menu</a>
+                <a href="index.html">Deals</a>
+                <a href="index.html">About</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="account-btn">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Account</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ORDER PAGE -->
+
+    <main class="order-page">
+
+        <div class="order-container">
+
+            <!-- PAGE HEADING -->
+
+            <div class="order-heading">
+
+                <span class="section-label">
+                    UFC ONLINE ORDER
+                </span>
+
+                <h1>
+                    Complete Your <span>Order.</span>
+                </h1>
+
+                <p>
+                    Choose your food, enter your details
+                    and we'll get your order ready.
+                </p>
+
+            </div>
+
+
+            <div class="order-layout">
+
+
+                <!-- LEFT SIDE -->
+
+                <section class="order-form">
+
+                    <div class="order-box">
+
+                        <div class="box-heading">
+                            <div class="step-number">01</div>
+
+                            <div>
+                                <h2>Your Information</h2>
+                                <p>Where should we deliver?</p>
+                            </div>
+                        </div>
+
+
+                        <div class="input-grid">
+
+                            <div class="input-group">
+
+                                <label>Full Name</label>
+
+                                <input
+                                    type="text"
+                                    id="customerName"
+                                    placeholder="Enter your name"
+                                >
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>Phone Number</label>
+
+                                <input
+                                    type="tel"
+                                    id="customerPhone"
+                                    placeholder="03XX XXXXXXX"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Delivery Address</label>
+
+                            <textarea
+                                id="customerAddress"
+                                rows="3"
+                                placeholder="House / Flat, Street, Area..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Order Type</label>
+
+                            <div class="choice-grid">
+
+                                <label class="choice-card">
+
+                                    <input
+                                        type="radio"
+                                        name="orderType"
+                                        value="delivery"
+                                        checked
+                                    >
+
+                                    <span>
+                                        <i class="fa-solid fa-motorcycle"></i>
+                                        Delivery
+                                    </span>
+
+                                </label>
+
+
+                                <label class="choice-card">
+
+                                    <input
+                                        type="radio"
+                                        name="orderType"
+                                        value="pickup"
+                                    >
+
+                                    <span>
+                                        <i class="fa-solid fa-store"></i>
+                                        Pickup
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PAYMENT -->
+
+                    <div class="order-box">
+
+                        <div class="box-heading">
+
+                            <div class="step-number">02</div>
+
+                            <div>
+                                <h2>Payment Method</h2>
+                                <p>Select your preferred payment.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-grid">
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="cod"
+                                    checked
+                                >
+
+                                <i class="fa-solid fa-money-bill-wave"></i>
+
+                                <strong>Cash on Delivery</strong>
+
+                                <small>Pay when your order arrives</small>
+
+                            </label>
+
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="easypaisa"
+                                >
+
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                                <strong>EasyPaisa</strong>
+
+                                <small>Pay through EasyPaisa</small>
+
+                            </label>
+
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="jazzcash"
+                                >
+
+                                <i class="fa-solid fa-wallet"></i>
+
+                                <strong>JazzCash</strong>
+
+                                <small>Pay through JazzCash</small>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOTES -->
+
+                    <div class="order-box">
+
+                        <div class="box-heading">
+
+                            <div class="step-number">03</div>
+
+                            <div>
+                                <h2>Special Instructions</h2>
+                                <p>Anything we should know?</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <textarea
+                                id="orderNotes"
+                                rows="3"
+                                placeholder="Extra cheese, less spicy, delivery instructions..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RIGHT SIDE -->
+
+                <aside class="order-summary">
+
+                    <div class="summary-box">
+
+                        <div class="summary-heading">
+
+                            <div>
+                                <span class="section-label">
+                                    YOUR CART
+                                </span>
+
+                                <h2>Order Summary</h2>
+                            </div>
+
+                            <span class="summary-count">
+                                0 Items
+                            </span>
+
+                        </div>
+
+
+                        <div id="orderItems" class="order-items">
+
+                            <div class="empty-cart">
+
+                                <i class="fa-solid fa-pizza-slice"></i>
+
+                                <h3>Your cart is empty</h3>
+
+                                <p>
+                                    Add something delicious
+                                    from our menu.
+                                </p>
+
+                                <a href="index.html"
+                                   class="btn btn-primary">
+                                    Browse Menu
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-calculation">
+
+                            <div>
+                                <span>Subtotal</span>
+                                <strong id="subtotal">
+                                    Rs. 0
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Delivery</span>
+                                <strong id="deliveryFee">
+                                    Rs. 0
+                                </strong>
+                            </div>
+
+                            <div class="total-row">
+
+                                <span>Total</span>
+
+                                <strong id="grandTotal">
+                                    Rs. 0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="place-order-btn"
+                            id="placeOrderBtn"
+                        >
+
+                            Place Order
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <p class="secure-note">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            Your information is secure.
+
+                        </p>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 UFC Pizza & Fast Food.
+                All rights reserved.
+            </p>
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

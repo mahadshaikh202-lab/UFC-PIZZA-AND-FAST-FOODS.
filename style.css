@@ -1,0 +1,3091 @@
+/* =====================================================
+   UFC PIZZA & FAST FOOD
+   Premium Dark Red + White Theme
+===================================================== */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #b5121b;
+    --red-light: #e21b2d;
+    --red-dark: #760b12;
+
+    --black: #090909;
+    --black-2: #111111;
+    --black-3: #181818;
+
+    --white: #ffffff;
+    --text: #eeeeee;
+    --muted: #999999;
+    --border: rgba(255, 255, 255, 0.09);
+
+    --radius: 18px;
+    --transition: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(9, 9, 9, 0.88);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo span {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: var(--white);
+}
+
+.logo small {
+    margin-top: 5px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    color: var(--red-light);
+}
+
+
+/* ---------- NAV LINKS ---------- */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #bbbbbb;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--white);
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--red-light);
+}
+
+
+/* ---------- NAV ACTIONS ---------- */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.account-btn,
+.cart-btn {
+    border: 1px solid var(--border);
+
+    background: var(--black-2);
+    color: var(--white);
+
+    height: 42px;
+
+    border-radius: 10px;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: var(--transition);
+}
+
+.account-btn:hover,
+.cart-btn:hover {
+    border-color: var(--red);
+    background: rgba(181, 18, 27, 0.12);
+}
+
+.account-btn {
+    font-size: 13px;
+}
+
+.cart-btn {
+    position: relative;
+
+    width: 44px;
+    padding: 0;
+
+    justify-content: center;
+}
+
+.cart-count {
+    position: absolute;
+
+    top: -6px;
+    right: -6px;
+
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--red-light);
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--black-2);
+    color: white;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    width: min(1200px, 92%);
+    min-height: 680px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* ---------- HERO CONTENT ---------- */
+
+.hero-content {
+    padding: 70px 0;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(226, 27, 45, 0.35);
+
+    background: rgba(181, 18, 27, 0.09);
+
+    border-radius: 50px;
+
+    color: #ff6973;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.hero-tag i {
+    color: var(--red-light);
+}
+
+
+.hero h1 {
+    margin-top: 25px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(55px, 6vw, 86px);
+
+    line-height: 0.96;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--red-light);
+}
+
+
+.hero-content > p {
+    max-width: 520px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+.btn {
+    min-height: 50px;
+
+    padding: 0 22px;
+
+    border-radius: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--red-light);
+    color: white;
+
+    box-shadow: 0 10px 30px rgba(226, 27, 45, 0.2);
+}
+
+.btn-primary:hover {
+    background: #ff2638;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(226, 27, 45, 0.3);
+}
+
+.btn-outline {
+    border: 1px solid var(--border);
+
+    background: var(--black-2);
+
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--red);
+}
+
+
+/* ---------- HERO INFO ---------- */
+
+.hero-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-top: 45px;
+}
+
+.hero-info > div {
+    display: grid;
+
+    grid-template-columns: auto auto;
+    column-gap: 8px;
+}
+
+.hero-info i {
+    grid-row: span 2;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--red-light);
+}
+
+.hero-info strong {
+    font-size: 14px;
+}
+
+.hero-info span {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero-image {
+    position: relative;
+
+    height: 530px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 2;
+
+    width: min(530px, 100%);
+    height: 530px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 10px solid rgba(255, 255, 255, 0.03);
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 30px 80px rgba(0, 0, 0, 0.6);
+
+    animation: floatPizza 5s ease-in-out infinite;
+}
+
+.hero-glow {
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    background: var(--red);
+
+    filter: blur(100px);
+
+    opacity: 0.18;
+}
+
+@keyframes floatPizza {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+.hero-price {
+    position: absolute;
+
+    z-index: 3;
+
+    right: 0;
+    bottom: 40px;
+
+    padding: 18px 22px;
+
+    background: rgba(17, 17, 17, 0.92);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.hero-price span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.hero-price strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--red-light);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 27px;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    padding: 90px 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    margin-top: 7px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1;
+}
+
+.section-label {
+    color: var(--red-light);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading > a {
+    color: #cccccc;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.section-heading > a:hover {
+    color: var(--red-light);
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.category-card {
+    min-height: 150px;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    background: var(--black-2);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+.category-card:hover,
+.category-card.active {
+    border-color: rgba(226, 27, 45, 0.5);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(181, 18, 27, 0.16),
+            var(--black-2)
+        );
+
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    font-size: 25px;
+}
+
+.category-card h3 {
+    font-size: 16px;
+}
+
+.category-card span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FOOD CARDS
+===================================================== */
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.food-card {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    background: var(--black-2);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+.food-card:hover {
+    border-color: rgba(226, 27, 45, 0.45);
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.food-image {
+    position: relative;
+
+    height: 245px;
+
+    overflow: hidden;
+}
+
+.food-image img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.06);
+}
+
+.popular-badge {
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    padding: 7px 10px;
+
+    background: var(--red-light);
+
+    border-radius: 7px;
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.food-title h3 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 21px;
+}
+
+.food-title span {
+    color: var(--red-light);
+
+    font-size: 15px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.food-info > p {
+    min-height: 50px;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.add-btn {
+    width: 100%;
+
+    height: 44px;
+
+    margin-top: 15px;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 14px;
+
+    transition: var(--transition);
+}
+
+.add-btn:hover {
+    background: var(--red-light);
+
+    border-color: var(--red-light);
+}
+
+
+/* =====================================================
+   DEAL
+===================================================== */
+
+.deal {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 320px;
+
+    padding: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    border: 1px solid rgba(226, 27, 45, 0.25);
+
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(226, 27, 45, 0.2),
+            transparent 35%
+        ),
+        var(--black-2);
+
+    border-radius: 25px;
+}
+
+.deal h2 {
+    max-width: 650px;
+
+    margin: 12px 0 15px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 0.98;
+}
+
+.deal h2 span {
+    color: var(--red-light);
+}
+
+.deal p {
+    max-width: 500px;
+
+    margin-bottom: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.deal-price {
+    min-width: 210px;
+
+    text-align: center;
+}
+
+.deal-price span {
+    display: block;
+
+    color: #bbbbbb;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.deal-price strong {
+    display: block;
+
+    margin: 8px 0;
+
+    color: var(--red-light);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 50px;
+}
+
+.deal-price small {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   WHY UFC
+===================================================== */
+
+.centered {
+    display: block;
+
+    text-align: center;
+}
+
+.centered h2 {
+    margin-top: 12px;
+}
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.why-card {
+    padding: 30px 25px;
+
+    border: 1px solid var(--border);
+
+    background: var(--black-2);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    transition: var(--transition);
+}
+
+.why-card:hover {
+    border-color: rgba(226, 27, 45, 0.4);
+
+    transform: translateY(-5px);
+}
+
+.why-card i {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 14px;
+
+    background: rgba(181, 18, 27, 0.12);
+
+    color: var(--red-light);
+
+    font-size: 21px;
+}
+
+.why-card h3 {
+    font-size: 15px;
+}
+
+.why-card p {
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    border-top: 1px solid var(--border);
+
+    background: #060606;
+}
+
+.footer-container {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    padding: 65px 0;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-brand p {
+    max-width: 280px;
+
+    margin-top: 18px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-links h4 {
+    margin-bottom: 5px;
+
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--red-light);
+}
+
+.footer-links i {
+    width: 18px;
+}
+
+.footer-bottom {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    padding: 20px 0;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    color: #666;
+
+    font-size: 10px;
+}
+
+.socials {
+    display: flex;
+    gap: 8px;
+}
+
+.socials a {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+.socials a:hover {
+    background: var(--red-light);
+
+    border-color: var(--red-light);
+
+    color: white;
+}
+
+
+/* =====================================================
+   CHATBOT BUTTON
+===================================================== */
+
+.chatbot-button {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 999;
+
+    width: 58px;
+    height: 58px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--red-light);
+
+    color: white;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(226, 27, 45, 0.35);
+
+    transition: var(--transition);
+}
+
+.chatbot-button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 15px 45px rgba(226, 27, 45, 0.5);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding-top: 30px;
+    }
+
+    .hero-content {
+        padding: 50px 0 20px;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .hero-image img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .deal {
+        padding: 45px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        min-height: 70px;
+    }
+
+    .logo span {
+        font-size: 28px;
+    }
+
+    .logo small {
+        font-size: 7px;
+    }
+
+    .account-btn span {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-info {
+        gap: 20px;
+    }
+
+    .hero-image {
+        height: 330px;
+    }
+
+    .hero-image img {
+        width: 310px;
+        height: 310px;
+    }
+
+    .hero-price {
+        right: 5px;
+        bottom: 5px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .category-grid {
+        gap: 10px;
+    }
+
+    .category-card {
+        min-height: 135px;
+
+        padding: 18px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-image {
+        height: 230px;
+    }
+
+    .deal {
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .deal-price {
+        text-align: left;
+    }
+
+    .deal-price strong {
+        font-size: 42px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .why-card {
+        padding: 22px 12px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .chatbot-button {
+        right: 18px;
+        bottom: 18px;
+
+        width: 52px;
+        height: 52px;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Scroll Animation */
+
+.animate {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.6s ease;
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Mobile Navigation */
+
+@media (max-width: 900px) {
+
+    .nav-links.mobile-open {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        background: #111;
+
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+}
+
+/* =====================================================
+   ORDER PAGE
+===================================================== */
+
+.order-page {
+    min-height: 100vh;
+    padding: 80px 0 100px;
+}
+
+.order-container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+
+/* ---------- ORDER HEADING ---------- */
+
+.order-heading {
+    margin-bottom: 55px;
+}
+
+.order-heading h1 {
+    margin-top: 12px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(45px, 6vw, 72px);
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+}
+
+.order-heading h1 span {
+    color: var(--red-light);
+}
+
+.order-heading p {
+    max-width: 560px;
+
+    margin-top: 18px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ---------- ORDER LAYOUT ---------- */
+
+.order-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.8fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* ---------- ORDER BOX ---------- */
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.order-box {
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    background: var(--black-2);
+
+    border-radius: var(--radius);
+}
+
+.box-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.step-number {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(226, 27, 45, 0.12);
+
+    color: var(--red-light);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 15px;
+}
+
+.box-heading h2 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 23px;
+}
+
+.box-heading p {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* ---------- INPUTS ---------- */
+
+.input-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group:last-child {
+    margin-bottom: 0;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #dddddd;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    outline: none;
+
+    background: #0c0c0c;
+
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 13px 14px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+.input-group textarea {
+    resize: vertical;
+
+    min-height: 95px;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #555;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--red-light);
+
+    box-shadow: 0 0 0 3px rgba(226, 27, 45, 0.08);
+}
+
+
+/* ---------- ORDER TYPE ---------- */
+
+.choice-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.choice-card {
+    cursor: pointer;
+}
+
+.choice-card input {
+    display: none;
+}
+
+.choice-card span {
+    min-height: 52px;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #0c0c0c;
+
+    color: #aaa;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.choice-card i {
+    color: var(--red-light);
+
+    font-size: 15px;
+}
+
+.choice-card input:checked + span {
+    border-color: var(--red-light);
+
+    background: rgba(181, 18, 27, 0.1);
+
+    color: white;
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.payment-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.payment-card {
+    position: relative;
+
+    cursor: pointer;
+
+    min-height: 145px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: #0c0c0c;
+
+    transition: var(--transition);
+}
+
+.payment-card input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.payment-card i {
+    margin-bottom: 20px;
+
+    color: var(--red-light);
+
+    font-size: 20px;
+}
+
+.payment-card strong {
+    font-size: 12px;
+}
+
+.payment-card small {
+    margin-top: 5px;
+
+    color: #666;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+.payment-card:has(input:checked) {
+    border-color: var(--red-light);
+
+    background: rgba(181, 18, 27, 0.1);
+}
+
+
+/* =====================================================
+   ORDER SUMMARY
+===================================================== */
+
+.order-summary {
+    position: sticky;
+
+    top: 105px;
+}
+
+.summary-box {
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    background: var(--black-2);
+
+    border-radius: var(--radius);
+}
+
+.summary-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.summary-heading h2 {
+    margin-top: 6px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+}
+
+.summary-count {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* ---------- EMPTY CART ---------- */
+
+.empty-cart {
+    min-height: 260px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.empty-cart > i {
+    margin-bottom: 18px;
+
+    color: var(--red-light);
+
+    font-size: 40px;
+
+    opacity: 0.8;
+}
+
+.empty-cart h3 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 20px;
+}
+
+.empty-cart p {
+    max-width: 220px;
+
+    margin: 7px 0 18px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+.empty-cart .btn {
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    font-size: 10px;
+}
+
+
+/* ---------- CART ITEMS ---------- */
+
+.order-items {
+    padding: 5px 0;
+}
+
+.cart-item {
+    padding: 15px 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-item-image {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+}
+
+.cart-item-image img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h4 {
+    font-size: 12px;
+}
+
+.cart-item-info p {
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+.cart-item-price {
+    color: var(--red-light);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ---------- CALCULATION ---------- */
+
+.summary-calculation {
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border);
+}
+
+.summary-calculation > div {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.summary-calculation strong {
+    color: white;
+
+    font-size: 11px;
+}
+
+.summary-calculation .total-row {
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px dashed var(--border);
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.summary-calculation .total-row strong {
+    color: var(--red-light);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+}
+
+
+/* ---------- PLACE ORDER ---------- */
+
+.place-order-btn {
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--red-light);
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    transition: var(--transition);
+}
+
+.place-order-btn:hover {
+    background: #ff2638;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 30px rgba(226, 27, 45, 0.25);
+}
+
+.secure-note {
+    margin-top: 14px;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 9px;
+}
+
+.secure-note i {
+    margin-right: 4px;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   ORDER PAGE MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .order-page {
+        padding: 55px 0 70px;
+    }
+
+    .order-heading {
+        margin-bottom: 35px;
+    }
+
+    .order-heading h1 {
+        font-size: 48px;
+    }
+
+    .order-box {
+        padding: 20px;
+    }
+
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-card {
+        min-height: 85px;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 14px;
+    }
+
+    .payment-card i {
+        margin: 0;
+    }
+
+    .payment-card small {
+        display: none;
+    }
+
+    .choice-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ===============================
+   CART ITEM CONTROLS
+================================ */
+
+.cart-item {
+    position: relative;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.qty-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: #181818;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s ease;
+}
+
+.qty-btn:hover {
+    background: #b5121b;
+    border-color: #b5121b;
+}
+
+.quantity-controls span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.remove-item {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: rgba(181,18,27,0.15);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.remove-item:hover {
+    background: #b5121b;
+}
+
+/* =====================================================
+   UFC PREMIUM AI CHATBOT
+===================================================== */
+
+.ufc-chatbot {
+    position: fixed;
+
+    right: 28px;
+    bottom: 105px;
+
+    width: 380px;
+    max-width: calc(100% - 30px);
+
+    background: #101010;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,0.65);
+
+    z-index: 99999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateY(25px)
+        scale(0.96);
+
+    transform-origin: bottom right;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* OPEN */
+
+.ufc-chatbot.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =====================================================
+   CHAT HEADER
+===================================================== */
+
+.ufc-chat-header {
+
+    padding: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b5121b,
+            #760b12
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.chat-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+
+.chat-avatar {
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.25);
+
+}
+
+
+.chat-brand strong {
+
+    display: block;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.chat-brand span {
+
+    display: block;
+
+    color:
+        rgba(255,255,255,0.75);
+
+    font-size: 11px;
+
+}
+
+
+.chat-brand span i {
+
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    background: #5cff78;
+
+    border-radius: 50%;
+
+    margin-right: 4px;
+
+}
+
+
+.chat-close {
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    color: #fff;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.chat-close:hover {
+
+    background:
+        rgba(255,255,255,0.25);
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =====================================================
+   CHAT BODY
+===================================================== */
+
+.chat-body {
+
+    height: 315px;
+
+    padding: 18px;
+
+    overflow-y: auto;
+
+    background: #0d0d0d;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+/* BOT MESSAGE */
+
+.bot-message {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+}
+
+
+.message-avatar {
+
+    width: 31px;
+    height: 31px;
+
+    min-width: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #b5121b;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+
+}
+
+
+.message-text {
+
+    background: #1d1d1d;
+
+    color: #eeeeee;
+
+    padding: 12px 14px;
+
+    border-radius:
+        4px
+        15px
+        15px
+        15px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    max-width: 80%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.06);
+
+}
+
+
+.message-text strong {
+
+    color: #fff;
+
+}
+
+
+/* USER MESSAGE */
+
+.chat-user-message {
+
+    align-self: flex-end;
+
+    background: #b5121b;
+
+    color: white;
+
+    padding: 11px 14px;
+
+    border-radius:
+        15px
+        4px
+        15px
+        15px;
+
+    font-size: 13px;
+
+    max-width: 80%;
+
+    line-height: 1.4;
+
+}
+
+
+/* =====================================================
+   CHAT OPTIONS
+===================================================== */
+
+.chat-options {
+
+    padding: 13px;
+
+    background: #151515;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+}
+
+
+.chat-options button {
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    background: #1d1d1d;
+
+    color: #fff;
+
+    padding: 11px 8px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+
+.chat-options button:hover {
+
+    background: #b5121b;
+
+    border-color: #b5121b;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   BIG CHAT BUTTON
+===================================================== */
+
+.ufc-chat-button {
+
+    position: fixed;
+
+    right: 28px;
+    bottom: 28px;
+
+    height: 65px;
+
+    padding: 0 20px 0 8px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e21b2d,
+            #9d0e17
+        );
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    z-index: 100000;
+
+    box-shadow:
+        0 10px 35px
+        rgba(181,18,27,0.45);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+/* BUTTON HOVER */
+
+.ufc-chat-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 45px
+        rgba(181,18,27,0.6);
+
+}
+
+
+/* ICON */
+
+.chat-button-icon {
+
+    width: 49px;
+    height: 49px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    color: #b5121b;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+}
+
+
+/* TEXT */
+
+.chat-button-text {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+}
+
+
+/* NOTIFICATION */
+
+.chat-notification {
+
+    position: absolute;
+
+    top: -4px;
+
+    right: -3px;
+
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    color: #b5121b;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    border: 2px solid #b5121b;
+
+}
+
+
+/* =====================================================
+   BUTTON PULSE
+===================================================== */
+
+.ufc-chat-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 40px;
+
+    border:
+        2px solid
+        rgba(226,27,45,0.5);
+
+    animation:
+        ufcChatPulse 2s infinite;
+
+}
+
+
+@keyframes ufcChatPulse {
+
+    0% {
+
+        transform: scale(1);
+
+        opacity: 0.8;
+
+    }
+
+    70% {
+
+        transform: scale(1.12);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: scale(1.12);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .ufc-chatbot {
+
+        right: 12px;
+
+        bottom: 92px;
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+
+    .chat-body {
+
+        height: 290px;
+
+    }
+
+
+    .ufc-chat-button {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        height: 60px;
+
+        padding-right: 17px;
+
+    }
+
+
+    .chat-button-icon {
+
+        width: 45px;
+        height: 45px;
+
+    }
+
+
+    .chat-button-text {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* =====================================================
+   UFC CHATBOT UPGRADE
+===================================================== */
+
+.chat-options {
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+
+/* CHAT OPTION */
+
+.chat-options button {
+    min-height: 42px;
+}
+
+
+/* MENU BUTTON */
+
+.chat-menu-button {
+    width: 100%;
+    padding: 11px 12px;
+
+    background: #1c1c1c;
+
+    color: #fff;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+.chat-menu-button:hover {
+    background: #b5121b;
+
+    border-color: #b5121b;
+
+    transform: translateX(2px);
+}
+
+
+/* DEAL CARD */
+
+.chat-deal {
+    background: #1b1b1b;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+}
+
+
+.chat-deal strong {
+    color: #fff;
+
+    font-size: 13px;
+}
+
+
+.chat-deal-price {
+    color: #ff3344;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    margin-top: 5px;
+}
+
+
+.chat-deal-details {
+    color: #aaa;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    margin-top: 7px;
+}
+
+
+.chat-deal-order {
+    margin-top: 9px;
+
+    width: 100%;
+
+    padding: 8px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #b5121b;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.chat-deal-order:hover {
+    background: #e21b2d;
+}
+
+
+/* BACK BUTTON */
+
+.chat-back {
+    width: 100%;
+
+    padding: 9px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: #222;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.chat-back:hover {
+    background: #b5121b;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .chat-options {
+        max-height: 190px;
+    }
+
+    .chat-deal {
+        padding: 10px;
+    }
+
+}
+
+/* ================================
+   UFC NEW CHATBOT FIX
+================================ */
+
+.ufc-chatbot {
+    position: fixed;
+    right: 25px;
+    bottom: 95px;
+    width: 360px;
+    max-width: calc(100% - 30px);
+    background: #111;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    z-index: 9999;
+    display: none;
+}
+
+.ufc-chatbot.open {
+    display: block;
+    animation: ufcChatOpen .25s ease;
+}
+
+@keyframes ufcChatOpen {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ufc-chat-header {
+    background: #b5121b;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.chat-brand strong {
+    display: block;
+    color: white;
+}
+
+.chat-brand span {
+    display: block;
+    color: rgba(255,255,255,.75);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.chat-brand span i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #4cff75;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.chat-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.chat-body {
+    height: 280px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.bot-message {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.message-avatar {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    background: #b5121b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-text {
+    background: #222;
+    color: #eee;
+    padding: 11px 13px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.chat-user-message {
+    background: #b5121b;
+    color: white;
+    padding: 10px 13px;
+    border-radius: 12px;
+    width: fit-content;
+    max-width: 80%;
+    margin: 8px 0 8px auto;
+    font-size: 13px;
+}
+
+.chat-options {
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.chat-options button {
+    padding: 11px 8px;
+    background: #1c1c1c;
+    color: white;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.chat-options button:hover {
+    background: #b5121b;
+    border-color: #b5121b;
+}
+
+.chat-deal {
+    grid-column: 1 / -1;
+    background: #1c1c1c;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.chat-deal strong {
+    color: white;
+}
+
+.chat-deal-price {
+    color: #ff3344;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 4px 0;
+}
+
+.chat-deal-details {
+    color: #aaa;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.chat-deal-order {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    background: #b5121b !important;
+    color: white;
+    border: none !important;
+    border-radius: 7px;
+}
+
+.chat-back {
+    grid-column: 1 / -1;
+}
+
+.ufc-chat-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    height: 62px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 35px;
+    background: #b5121b;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 10px 35px rgba(0,0,0,.5);
+    font-weight: 700;
+}
+
+.ufc-chat-button:hover {
+    background: #e21b2d;
+    transform: scale(1.04);
+}
+
+.chat-button-icon {
+    font-size: 22px;
+}
+
+.chat-button-text {
+    font-size: 14px;
+}
+
+.chat-notification {
+    position: absolute;
+    top: -4px;
+    right: -3px;
+    background: white;
+    color: #b5121b;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:500px) {
+
+    .ufc-chatbot {
+        right: 15px;
+        bottom: 90px;
+        width: calc(100% - 30px);
+    }
+
+    .ufc-chat-button {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .chat-button-text {
+        display: none;
+    }
+
+    .ufc-chat-button {
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        justify-content: center;
+    }
+}
